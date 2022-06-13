@@ -56,24 +56,5 @@ public Coche(float velocidad, float caballos, int asientos, int orientacionRueda
 	this.orientacionRuedas = orientacionRuedas;
 	
 	this.caballos = caballos;
-	
-public class Coche extends Vehiculo {
-	private float caballos;
-	public Coche(float velocidad, float caballos, int asientos, int orientacionRuedas) {
-		super(velocidad, asientos, orientacionRuedas);
-		this.caballos = caballos
 }
-
-public class Bicicleta extends Vehiculo {
-	private int cambios;
-	public Bicicleta() {
-		super(0.0f , 4 , 0);
-		this.cambios = 3;
-	}
-	public Bicicleta(float velocidad, int cambio, int asientos, int orientacionRuedas) {
-		super(velocidad, asientos, orientacionRuedas);
-		this.cambios = cambios
-	}
-}
-	
 	
