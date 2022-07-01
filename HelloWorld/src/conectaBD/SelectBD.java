@@ -11,26 +11,20 @@ public class SelectBD {
 	public static void main(String[] args) {
 		try {
 			Connection conexion =
-					DriverManager.getConnection(""
-							+ "jdbc:mysql://localhost:3306/banco", 
+					DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", 
 							"banco", "banco");
 			System.out.println("Esta conectado con Banco");
 			
-			PreparedStatement ps = conexion.conexionStatement(""
-					+ "SELECT * FROM gestor);
+			PreparedStatement instruccion = conexion.createStatement();
+			String query = "SELECT * FROM gestor";
 		
-			ResultSet resultados = ps.executeQuery();
+			ResultSet resultados = instruccion.executeQuery(query);
 			System.out.println("Listado de gestores: ");
 			while (resultados.next()) {
-				System.out.println(""
-						+ "Gestor " + resultados.getInt("id"));
-				System.out.println(""
-						+ "Usuario: " 
-						+ resultados.getString("usuario"));
-				System.out.println("Password: " 
-						+ resultados.getString("password"));
-				System.out.println("Correo: " 
-						+ resultados.getString("correo"));
+				System.out.println("Gestor " + resultados.getInt("id"));
+				System.out.println("Usuario" + resultados.getString("usuario"));
+				System.out.println("Password" + resultados.getString("password"));
+				System.out.println("Correo" + resultados.getString("correo"));
 				System.out.println("...");
 			}
 			System.out.println("Programa finalizado");
