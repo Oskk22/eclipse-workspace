@@ -18,7 +18,7 @@ public static void main(String[] args) {
 			
 			
 			String instruccionSQL= "INSERT INTO gestor ('correo, id, password, usuario)"
-					+ "VALUES ('gestor1@correo.com','1','hfgjy5257275ygjyuyu587685735','gestor1')";
+					+ "VALUES ('gestor1@correo.com','','hfgjy5257275ygjyuyu587685735','gestor1')";
 			
 			miStatement.executeUpdate(instruccionSQL);
 			System.out.println("Datos insertados correctamente");

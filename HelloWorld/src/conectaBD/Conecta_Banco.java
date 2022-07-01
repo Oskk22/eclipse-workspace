@@ -16,7 +16,7 @@ public class Conecta_Banco {
 					conexion.getMetaData().getDatabaseProductName());
 		}
 		catch (Exception e) {
-			System.out.println("No esta conectado");
+			System.out.println("N esta conectado");
 			e.getStackTrace();
 		}
 
