@@ -23,7 +23,7 @@ import java.util.Map;
 		}
 		
 		@PostMapping("/procesarFormulario")
-		public String procesarFormulario(HttpServletRequest request, Model model) {
+		public String procesarFormulario(@RequestParam("")String nombre, @RequestBody String body, Model model) {
 			String nombre = request.getParameter("nombre");
 		}
 			String mensaje = (nombre == null) ? "undefined" : nombre.toUpperCase(); {
